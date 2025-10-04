@@ -7,7 +7,7 @@ Version: 1.0.0
 --[[
 This library enables players to shake their own camera, and the camera of other players who also have this library.
 Example:
-local cameraShake = require('CameraShake')
+local cameraShake = require('lib/CameraShakeAPI')
 function shakeCamera(duration, intensity)
     cameraShake.update(duration, intensity)
     log(string.format("shakeCamera(%d, %d)",
