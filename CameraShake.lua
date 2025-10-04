@@ -2,7 +2,7 @@
 Camera Shake API
 Author: SyntaxScales
 Contributor: psq95
-Version: 1.0.0
+Version: 1.0.1
 ]]--
 --[[
 This library enables players to shake their own camera, and the camera of other players who also have this library.
