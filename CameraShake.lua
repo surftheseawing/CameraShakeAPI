@@ -104,17 +104,17 @@ function events.tick()
             contain the new value.
             ]]--
             local shakeUpdateTicker = v:getVariable("cameraShakeUpdateTicker")
-            local lastUpdateTicker = cameraShakeReceivers[v:getUUID()]
 
             -- Make sure that the camera shake information was actually found.
-            if (not (shakeDuration == nil or shakeMaxDuration == nil or 
-                     shakeIntensity == nil or shakeUpdateTicker == nil or
-                    lastUpdateTicker == nil)) then
+            if (shakeDuration ~= nil and
+                shakeMaxDuration ~= nil and
+                shakeIntensity ~= nil and
+                shakeUpdateTicker ~= nil)
+            then
                 -- If the viewer is too far away, don't shake
-                if ((player:getPos() - v:getPos()):length() <=
-                    shakeIntensity * 1200) then
+                if ((player:getPos() - v:getPos()):length() <= shakeIntensity * 1200) then
                     -- If there has been an update (meaning a new screen shake was sent)
-                    if (not (shakeUpdateTicker == lastUpdateTicker)) then
+                    if (shakeUpdateTicker ~= cameraShakeReceivers[v:getUUID()]) then
                         cameraShakeDuration = shakeDuration
                         cameraShakeMaxDuration = shakeMaxDuration
                         cameraShakeIntensity = shakeIntensity
