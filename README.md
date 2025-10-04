@@ -4,10 +4,14 @@ Figura library that enables players to shake their own camera and the camera of 
 
 **Table of Contents**
 
-- [Features](#️-features)
-- [Functions](#-functions)
+- [Features](#️features)
+- [Functions](#functions)
     - [Require](#require)
     - [Update](#update)
+    - [Set Default Position](#setDefaultPos)
+    - [Get Duration](#getDuration)
+    - [Get Maximum Duration](#getMaxDuration)
+    - [Get Intensity](#getIntensity)
 
 ## Features
 
